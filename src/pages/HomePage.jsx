@@ -35,6 +35,19 @@ export default function HomePage() {
 
   return (
     <main className="p-6 space-y-8 scroll-smooth">
+      <section
+  className="bg-cover bg-center h-[600px] flex flex-col items-center justify-center text-white text-center px-4"
+  style={{ backgroundImage: "url('/tienda-reacondicionados.png')" }}
+>
+  <div className="bg-black bg-opacity-60 p-8 rounded-xl">
+    <h1 className="text-5xl font-bold mb-4">Gestiona tu negocio de reacondicionados y usados</h1>
+    <p className="text-xl mb-6">El primer software integral para tiendas de móviles</p>
+    <a href="#contacto">
+      <Button className="text-lg px-6 py-3">Solicita una demo</Button>
+    </a>
+  </div>
+</section>
+
       {/* Hero Section */}
       <section className="text-center pt-20 pb-6">
         <h1 className="text-5xl font-bold mb-4">Gestiona tu negocio de reacondicionados y usados de forma fácil y eficiente</h1>
@@ -64,6 +77,22 @@ export default function HomePage() {
           ))}
         </div>
       </section>
+
+      {/* Vídeo explicativo */}
+<section className="max-w-4xl mx-auto text-center mb-12">
+  <h2 className="text-3xl font-semibold mb-4"> PCM </h2>
+  <div className="relative pb-[56.25%] h-0 overflow-hidden rounded-xl">
+  <iframe
+  className="absolute top-0 left-0 w-full h-full"
+  src="https://www.youtube.com/embed/TSnKQmsFnxc"
+  title="Video explicativo PCM"
+  frameBorder="0"
+  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+  allowFullScreen
+></iframe>
+  </div>
+</section>
+
 
       {/* Planes de Suscripción */}
       <section className="text-center">
@@ -124,9 +153,21 @@ export default function HomePage() {
   <p className="text-lg mb-6">Aprende a usar PhoneCycle Manager con nuestros vídeos paso a paso</p>
   <div className="grid grid-cols-1 gap-6 max-w-6xl mx-auto">
     <div className="flex justify-center flex-wrap gap-4">
-      {["Introducción a PCM", "Inicio de sesión y configuración de cuenta", "Entrada de inventario", "Compra particular", "Gestión de tienda"].map((title, index) => (
-        <Button key={index} variant="outline" className="text-sm px-4 py-2">{title}</Button>
-      ))}
+    {["Introducción a PCM", "Inicio de sesión y configuración de cuenta", "Entrada de inventario", "Compra particular", "Gestión de tienda"].map((title, index) => (
+  title === "Introducción a PCM" ? (
+    <a
+      key={index}
+      href="https://www.youtube.com/embed/TSnKQmsFnxc"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      <Button variant="outline" className="text-sm px-4 py-2">{title}</Button>
+    </a>
+  ) : (
+    <Button key={index} variant="outline" className="text-sm px-4 py-2">{title}</Button>
+  )
+))}
+
     </div>
     <div className="flex justify-center flex-wrap gap-4">
       {["Garantías", "Mantenimiento de modelos y precios", "Gestión de accesorios", "Gestión de stock e inventarios", "Ventas al Mayor"].map((title, index) => (
@@ -160,7 +201,7 @@ export default function HomePage() {
         <div className="mt-8 text-sm">
           <p>📧 info@estudio510.com</p>
           <p>📞 +34 629 262 690</p>
-          <p>🌐 www.estudio510.com</p>
+          <p>🌐 www.pcm2050.com</p>
         </div>
       </section>
     </main>
