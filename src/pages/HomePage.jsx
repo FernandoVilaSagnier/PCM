@@ -40,7 +40,8 @@ export default function HomePage() {
   style={{ backgroundImage: "url('/tienda-reacondicionados.png')" }}
 >
   <div className="bg-black bg-opacity-60 p-8 rounded-xl">
-    <h1 className="text-5xl font-bold mb-4">Gestiona tu negocio de reacondicionados y usados</h1>
+  <h1 className="text-6xl font-bold mb-4">PhoneCycle Manager</h1>
+  <h1 className="text-4xl font-bold mb-4">Gestiona tu negocio de reacondicionados y usados</h1>
     <p className="text-xl mb-6">El primer software integral para tiendas de móviles</p>
     <a href="#contacto">
       <Button className="text-lg px-6 py-3">Solicita una demo</Button>
@@ -201,7 +202,7 @@ export default function HomePage() {
         <div className="mt-8 text-sm">
           <p>📧 info@estudio510.com</p>
           <p>📞 +34 629 262 690</p>
-          <p>🌐 www.pcm2050.com</p>
+          {/* <p>🌐 www.pcm2050.com</p> */}
         </div>
       </section>
     </main>
