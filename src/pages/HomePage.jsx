@@ -185,6 +185,7 @@ export default function HomePage() {
         target="_blank"
         rel="noopener noreferrer"
         className="inline-flex items-center justify-center rounded-xl border border-gray-300 bg-gray-100 px-4 py-2 text-sm font-medium text-gray-800 hover:bg-gray-200"
+      >
         {title}
       </a>
     );
@@ -196,6 +197,7 @@ export default function HomePage() {
     </Button>
   );
 })}
+
 
     </div>
   </div>
