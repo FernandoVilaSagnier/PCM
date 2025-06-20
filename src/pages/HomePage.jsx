@@ -176,9 +176,28 @@ export default function HomePage() {
       ))}
     </div>
     <div className="flex justify-center flex-wrap gap-4">
-      {["Teléfonos en Test", "Control de Pagos y Contabilidad", "Taller", "Devoluciones"].map((title, index) => (
-        <Button key={index + 10} variant="outline" className="text-sm px-4 py-2">{title}</Button>
-      ))}
+    {["Teléfonos en Test", "Roles de Usuarios", "Control de Pagos y Contabilidad", "Taller", "Devoluciones"].map((title, index) => {
+  if (title === "Roles de Usuarios") {
+    return (
+      <a
+        key={index + 10}
+        href="/roles-usuarios.pdf"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="text-sm px-4 py-2 border rounded-xl border-gray-300 hover:bg-gray-100 mr-2 mb-2 inline-block text-center"
+      >
+        {title}
+      </a>
+    );
+  }
+
+  return (
+    <Button key={index + 10} variant="outline" className="text-sm px-4 py-2">
+      {title}
+    </Button>
+  );
+})}
+
     </div>
   </div>
 </section>
